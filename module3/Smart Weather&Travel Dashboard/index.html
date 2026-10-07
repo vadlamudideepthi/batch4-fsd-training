@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Weather & Travel Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🌤️ Smart Travel</div>
+
+        <nav>
+            <a href="#weather">Weather</a>
+            <a href="#travel">Travel</a>
+            <a href="#planner">Planner</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <div>
+                <h1>Smart Weather & Travel Dashboard</h1>
+                <p>
+                    Check the weather and plan your next trip easily.
+                </p>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section id="weather" class="section">
+
+            <h2>🌦️ Weather Dashboard</h2>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name"
+                >
+                <button onclick="searchWeather()">Search</button>
+            </div>
+
+            <div class="weather-card">
+
+                <div class="weather-icon" id="weatherIcon">
+                    ☀️
+                </div>
+
+                <h2 id="cityName">Chennai</h2>
+
+                <div class="temperature">
+                    <span id="temperature">32</span>°C
+                </div>
+
+                <p id="condition">Sunny</p>
+
+                <div class="weather-details">
+
+                    <div>
+                        <span>💧</span>
+                        <strong id="humidity">65%</strong>
+                        <p>Humidity</p>
+                    </div>
+
+                    <div>
+                        <span>💨</span>
+                        <strong id="wind">14 km/h</strong>
+                        <p>Wind</p>
+                    </div>
+
+                    <div>
+                        <span>🌡️</span>
+                        <strong id="feels">35°C</strong>
+                        <p>Feels Like</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Travel Destinations -->
+        <section id="travel" class="section">
+
+            <h2>✈️ Popular Travel Destinations</h2>
+
+            <div class="destination-container">
+
+                <div class="destination-card">
+                    <div class="destination-image">🏖️</div>
+                    <h3>Goa</h3>
+                    <p>Beaches, sunshine and beautiful sunsets.</p>
+                    <button onclick="selectDestination('Goa')">
+                        Plan Trip
+                    </button>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image">🏔️</div>
+                    <h3>Manali</h3>
+                    <p>Mountains, snow and adventure activities.</p>
+                    <button onclick="selectDestination('Manali')">
+                        Plan Trip
+                    </button>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image">🏰</div>
+                    <h3>Jaipur</h3>
+                    <p>Royal palaces, forts and cultural experiences.</p>
+                    <button onclick="selectDestination('Jaipur')">
+                        Plan Trip
+                    </button>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image">🌴</div>
+                    <h3>Kerala</h3>
+                    <p>Backwaters, nature and peaceful surroundings.</p>
+                    <button onclick="selectDestination('Kerala')">
+                        Plan Trip
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Travel Planner -->
+        <section id="planner" class="section">
+
+            <h2>🧳 Travel Planner</h2>
+
+            <div class="planner">
+
+                <label>Destination</label>
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="Enter destination"
+                >
+
+                <label>Travel Date</label>
+                <input type="date" id="travelDate">
+
+                <label>Number of Travelers</label>
+                <input
+                    type="number"
+                    id="travelers"
+                    min="1"
+                    value="1"
+                >
+
+                <button onclick="createPlan()">
+                    Create Travel Plan
+                </button>
+
+                <div id="planResult"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Smart Weather & Travel Dashboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

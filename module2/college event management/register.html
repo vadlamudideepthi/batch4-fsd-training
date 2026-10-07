@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - College Events</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <h2>College Events</h2>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="events.html">Events</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="register.html">Register</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>Event Registration</h1>
+
+    <p>Register for your favorite college event</p>
+
+</section>
+
+
+<section class="form-container">
+
+    <form id="registrationForm">
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+        >
+
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+        >
+
+
+        <label>Phone Number</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+        >
+
+
+        <label>College ID</label>
+
+        <input
+            type="text"
+            id="collegeId"
+            placeholder="Enter your college ID"
+            required
+        >
+
+
+        <label>Select Event</label>
+
+        <select id="event" required>
+
+            <option value="">-- Select Event --</option>
+
+            <option value="Code Fest">
+                Code Fest 2026
+            </option>
+
+            <option value="Cultural Fest">
+                Cultural Fest
+            </option>
+
+            <option value="Sports Meet">
+                Sports Meet
+            </option>
+
+            <option value="Tech Workshop">
+                Tech Workshop
+            </option>
+
+        </select>
+
+
+        <button type="submit" class="btn">
+            Register Now
+        </button>
+
+    </form>
+
+    <p id="registrationMessage"></p>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 College Event Management System</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
